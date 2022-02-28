@@ -1,9 +1,26 @@
 class Articles:
 
-    def __ini__(self, id, name, title, author, urlToImage, description):
+    def __ini__(self, id, name, title, urlToImage, author, publishedAt, description):
         self.id = id
         self.name = name
         self.title = title
-        self.author = author
         self.urlToImage = urlToImage
+        self.author = author
+        self.publishedAt = publishedAt
         self.description = description
+
+class Display:
+
+    articles_display = []
+
+    def __ini__(self, id, name, title, urlToImage, author, publishedAt, description):
+        self.id = id
+        self.name = name
+        self.title = title
+        self.urlToImage = urlToImage
+        self.author = author
+        self.publishedAt = publishedAt
+        self.description = description
+
+    def save_display(self):
+        Display.source_display.append(self)
