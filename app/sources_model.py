@@ -1,8 +1,9 @@
 class Sources:
 
-    def __ini__(self, id, name, description, url, category, language, country):
+    def __init__(self, id, name, description, url, category, language, country):
         self.id = id
         self.name = name
+        self.description = description
         self.url = url
         self.category = category
         self.langauge = language
@@ -16,6 +17,7 @@ class Display:
     def __ini__(self, id, name, description, url, category, language, country):
         self.id = id
         self.name = name
+        self.description = description
         self.url = url
         self.category = category
         self.langauge = language
@@ -23,3 +25,5 @@ class Display:
 
     def save_display(self):
         Display.source_display.append(self)
+
+    
