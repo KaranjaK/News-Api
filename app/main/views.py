@@ -7,10 +7,8 @@ from ..articles_model import Display
 
 @main.route('/')
 def index():
-
-    message = "We made it Mama"
     sources = get_source()
-    return render_template('index.html', message = message, sources = sources)
+    return render_template('index.html', sources = sources)
 
 @main.route('/article/<id>')
 def article(id):
