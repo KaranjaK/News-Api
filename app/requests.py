@@ -4,14 +4,14 @@ from .articles_model import Articles, Display
 
 api_key = None
 base_url = None
-cate_url = None
+cat_url = None
 
 
 def configure_request(app):
-    global api_key, base_url, cate_url
+    global api_key, base_url, cat_url
     api_key = app.config['NEWS_API_KEY']
     base_url = app.config['NEWS_API_BASE_URL']
-    cate_url = app.config['CATE_API_URL']
+    cat_url = app.config['CATE_API_URL']
 
 def get_source():
     get_source_url = base_url.format(api_key)
@@ -76,8 +76,8 @@ def process_articles_results(news):
 
     return article_source_result
 
-def get_by_category(cate_name):
-    get_category_url = cate_url.format(cate_name,api_key)
+def get_by_category(cat_name):
+    get_category_url = cat_url.format(cat_name,api_key)
     with urllib.request.urlopen(get_category_url) as url:
         get_category_data = url.read()
         get_category_response = json.loads(get_category_data)
