@@ -23,4 +23,4 @@ class Display:
         self.description = description
 
     def save_display(self):
-        Display.source_display.append(self)
+        Display.articles_display.append(self)
