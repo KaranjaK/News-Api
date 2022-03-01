@@ -9,8 +9,8 @@ from ..articles_model import Display
 def index():
 
     message = "We made it Mama"
-    sources_category = get_source()
-    return render_template('index.html', message = message, id = sources_category)
+    sources = get_source()
+    return render_template('index.html', message = message, sources = sources)
 
 @main.route('/article/<id>')
 def article(id):
