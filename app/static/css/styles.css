@@ -1,9 +1,22 @@
 .navbar{
     font-size: 3rem;
+    background-color: #00a7a2;
 }
 .navbar-brand{
     font-size: 3rem;
 }
 a {
+    color: whitesmoke;
+}
+.card-column{
+    margin-top: 7rem;
+}
+.card-header{
+    height: 4rem;
+    width: 18rem;
+    background-color: #fd9333;
+}
+.list-group{
+    font-size: 1.5rem;
     color: black;
 }
