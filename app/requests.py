@@ -1,10 +1,6 @@
-from concurrent.futures import process
-from distutils.command.config import config
-from turtle import title
-from unicodedata import category
 import urllib.request, json
-from .sources_model import Sources
-from .articles_model import Articles
+from .sources_model import Sources, Display
+from .articles_model import Articles, Display
 
 api_key = None
 base_url = None
@@ -12,8 +8,8 @@ cate_url = None
 
 
 def configure_request(app):
-    global api_key, base_url
-    apiKey = app.config['NEWS_API_KEY']
+    global api_key, base_url, cate_url
+    api_key = app.config['NEWS_API_KEY']
     base_url = app.config['NEWS_API_BASE_URL']
     cate_url = app.config['CATE_API_URL']
 
@@ -37,12 +33,13 @@ def process_results(source_list):
     for source_item in source_list:
         id = source_item.get('id')
         name = source_item.get('name')
+        description = source_item.get('description')
         url = source_item.get('url')
         category = source_item.get('category')
         language = source_item.get('language')
         country = source_item.get('country')
         if id:
-            source_object = Sources(id,name,url,category,language,country)
+            source_object = Sources(id,name,description, url,category,language,country)
             source_results.append(source_object)
 
     return source_results
