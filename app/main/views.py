@@ -1,11 +1,7 @@
-from ast import arguments
-from turtle import title
 from flask import render_template, request, redirect, url_for
 
 from app.requests import get_by_category, get_source, getarticle_source
 from . import main
-# from .. requests import 
-# from .forms import ReviewForm
 from ..sources_model import Display
 from ..articles_model import Display
 
