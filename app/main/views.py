@@ -1,4 +1,6 @@
 from flask import render_template, request, redirect, url_for
+
+from app.requests import get_source
 from . import main
 # from .. requests import 
 # from .forms import ReviewForm
@@ -9,4 +11,5 @@ from ..articles_model import Display
 def index():
 
     message = "We made it Mama"
-    return render_template('index.html', message = message)
+    sources_category = get_source()
+    return render_template('index.html', message = message, id = sources_category)
