@@ -10,14 +10,14 @@
 
                     <div class="col-3">
                         <div class="card-column">
-                            <div class="card-header">
-                                <h4>Browse News Sources</h4>
+                            <div class="card-header position-fixed">
+                                <h4 class="browse">Browse News Sources</h4>
                             </div>
                             <div class="list-group list-group-flush scrolly">
                                 <ul>
                                     {% for source in sources %}
-                                        <a href="/article/{{source.id}}">
-                                            <p class="text-capitalize text-dark ">{{source.id}}</p>
+                                        <a href="/articles/{{source.id}}">
+                                            <p class="text-capitalize text-dark ">{{source.name}}</p>
                                         </a>
                                     {% endfor %}
                                 </ul>
@@ -27,11 +27,10 @@
                     </div>
 
                     <div class="col-9">
-                        <h1 align="center"> HEADLINE NEWS </h3>
-                        <div class="container">
+                        <div class="container-fluid">
+                            <h1 class="headlinenews"> NEWS MAKING HEADLINES </h3>
                             <div class="card-columns">
                                 {% for headlines in headlines %}
-
                                     <div class="card">
                                         <img class="card" src="{{headlines.image}}" alt="Card image cap" size="100px100">
                                         <div class="card-body">
