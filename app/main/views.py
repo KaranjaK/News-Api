@@ -8,4 +8,5 @@ from ..articles_model import Display
 @main.route('/')
 def index():
 
-    return render_template('index.html')
+    message = "We made it Mama"
+    return render_template('index.html', message = message)
