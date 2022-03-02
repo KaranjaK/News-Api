@@ -14,7 +14,7 @@ class Display:
 
     source_display = []
 
-    def __ini__(self, id, name, description, url, category, language, country):
+    def __init__(self, id, name, description, url, category, language, country):
         self.id = id
         self.name = name
         self.description = description
@@ -25,5 +25,3 @@ class Display:
 
     def save_display(self):
         Display.source_display.append(self)
-
-    
