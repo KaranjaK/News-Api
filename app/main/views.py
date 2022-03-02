@@ -1,6 +1,6 @@
 from flask import render_template, request, redirect, url_for
 
-from app.requests import get_by_category, get_source, getarticle_source
+from app.requests import get_by_category, get_headlines, get_source, getarticle_source
 from . import main
 from ..sources_model import Display
 from ..articles_model import Display
@@ -8,7 +8,8 @@ from ..articles_model import Display
 @main.route('/')
 def index():
     sources = get_source()
-    return render_template('index.html', sources = sources)
+    headlines = get_headlines()
+    return render_template('index.html', sources = sources, headlines = headlines)
 
 @main.route('/article/<id>')
 def article(id):
