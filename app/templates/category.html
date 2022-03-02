@@ -3,23 +3,23 @@
     <body>
         <h1 align="center" class="text-uppercase">{{cat}} NEWS </h1>
         <div class="container">
-            <div class="card-columns">
+            <div class="card-columns catcolumns">
                 {% for category in category %}
-                <div class="card">
-                    <img class="card" src="{{category.image}}" alt="Card image cap" size="50px 50px">
+                <div class="card zoom">
+                    <img class="card" src="{{category.urlToImage}}" alt="Image is Loading" size="50px 50px">
                     <div class="card-body">
-                        <h5 class="card-title">{{category.author}}</h5>
+                        <h4 class="card-title">{{category.author}}</h4>
                         <p class="card-text">{{category.description}}</p>
-                        <a href="{{category.url}}">
-                        <p class="card-text">Click here for more details!</p>
+                        <a href="{{category.url}}" target="_blank">
+                        <p class="card-text">Find out More</p>
                         </a>
                     </div>
                     <div class="card-footer">
-                        <small class="text-muted">Publish date:{{category.time}}</small>
+                        <medium class="text-muted">Publish on:{{category.publishedAt}}</medium>
                     </div>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </body>
-{% end of block content %}
+{% endblock%}
