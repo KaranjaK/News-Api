@@ -92,7 +92,6 @@ def get_by_category(cat_name):
 
 def get_headlines():
     get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey={}'.format(api_key)
-
     with urllib.request.urlopen(get_headlines_url) as url:
         get_headlines_data = url.read()
         get_headlines_response = json.loads(get_headlines_data)
