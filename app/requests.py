@@ -67,17 +67,18 @@ def process_articles_results(news):
         title = article.get('title')
         urlToimage = article.get('urlToImage')
         author = article.get('title')
+        url = article.get('url')
         publishedAt = article.get('publishedAt')
         description = article.get('description')
 
         if urlToimage:
-            article_object = Articles(id, name, title, urlToimage, author, publishedAt, description)
+            article_object = Articles(id, name, title, urlToimage, author, url, publishedAt, description)
             article_source_result.append(article_object)
 
     return article_source_result
 
-def get_by_category():
-    get_category_url = cat_url.format(api_key)
+def get_by_category(cat_name):
+    get_category_url = cat_url.format(cat_name, api_key)
     with urllib.request.urlopen(get_category_url) as url:
         get_category_data = url.read()
         get_category_response = json.loads(get_category_data)
