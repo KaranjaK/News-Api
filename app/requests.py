@@ -76,8 +76,8 @@ def process_articles_results(news):
 
     return article_source_result
 
-def get_by_category(cat_name):
-    get_category_url = cat_url.format(cat_name,api_key)
+def get_by_category():
+    get_category_url = cat_url.format(api_key)
     with urllib.request.urlopen(get_category_url) as url:
         get_category_data = url.read()
         get_category_response = json.loads(get_category_data)
