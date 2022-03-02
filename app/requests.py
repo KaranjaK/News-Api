@@ -74,6 +74,7 @@ def process_articles_results(news):
         if urlToimage:
             article_object = Articles(id, name, title, urlToimage, author, url, publishedAt, description)
             article_source_result.append(article_object)
+            
 
     return article_source_result
 
