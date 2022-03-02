@@ -19,11 +19,6 @@ a {
 .card-column{
     margin-top: 8.2rem;
 }
-.card-header{
-    height: 4rem;
-    width: 18rem;
-    background-color: #fd9333;
-}
 .list-group{
     font-size: 1.5rem;
     color: black;
@@ -34,9 +29,8 @@ a {
 .browse{
     font-family: Concert One;
     font-size: 1.6rem;
-    color: whitesmoke;
     font-weight: 900;
-    text-shadow: .2rem .2rem .3rem #000;
+    text-shadow: .2rem .2rem .3rem whitesmoke;
 }
 .headlinenews{
     text-align: center;
