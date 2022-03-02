@@ -13,7 +13,7 @@ class Display:
 
     articles_display = []
 
-    def __ini__(self, id, name, title, urlToImage, author, publishedAt, description):
+    def __init__(self, id, name, title, urlToImage, author, publishedAt, description):
         self.id = id
         self.name = name
         self.title = title
