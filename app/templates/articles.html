@@ -6,11 +6,11 @@
             <div class="card-columns">
             {% for article in articles %}
             <div class="card">
-                <img class="card" src="{{article.image}}" alt="Card image cap" size="100px100">
+                <img class="card" src="{{article.urlToImage}}" alt="Card image cap" size="100px100">
                 <div class="card-body">
                 <h5 class="card-title">{{article.author}}</h5>
                 <p class="card-text">{{article.description}}</p>
-                <a href="{{article.url}}">
+                <a href="{{article.url}}" target="_blank">
                     <p class="card-text">Explore!</p>
                 </a>
                 </div>
