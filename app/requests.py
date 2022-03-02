@@ -62,13 +62,13 @@ def getarticle_source(id):
 def process_articles_results(news):
     article_source_result = []
     for article in news:
-        id = id.get('id')
-        name = name.get('name')
-        title = title.get('title')
-        urlToimage = urlToimage.get('urlToImage')
-        author = author.get('title')
-        publishedAt = publishedAt.get('publishedAt')
-        description = description.get('description')
+        id = article.get('id')
+        name = article.get('name')
+        title = article.get('title')
+        urlToimage = article.get('urlToImage')
+        author = article.get('title')
+        publishedAt = article.get('publishedAt')
+        description = article.get('description')
 
         if urlToimage:
             article_object = Articles(id, name, title, urlToimage, author, publishedAt, description)
