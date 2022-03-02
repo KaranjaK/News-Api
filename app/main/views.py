@@ -18,9 +18,9 @@ def article(id):
     return render_template('article.html', id = id, article = article)
 
 @main.route('/categories/<cat_name>')
-def category(cate_name):
+def category(cat_name):
 
-    category = get_by_category(cate_name)
-    title = f'{cate_name}'
-    cate = cate_name
+    category = get_by_category(cat_name)
+    title = f'{cat_name}'
+    cate = cat_name
     return render_template('category.html', title=title, category=category, cate=cate)
