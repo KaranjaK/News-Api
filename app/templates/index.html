@@ -16,7 +16,7 @@
                             <div class="list-group list-group-flush scrolly">
                                 <ul>
                                     {% for source in sources %}
-                                        <a href="{{source.id}}">
+                                        <a href="{{source.url}}" target="_blank">
                                             <p class="text-capitalize text-dark ">{{source.name}}</p>
                                         </a>
                                     {% endfor %}
@@ -36,12 +36,12 @@
                                         <div class="card-body">
                                             <h4 class="card-title">{{headlines.author}}</h4>
                                             <p class="card-text">{{headlines.description}}</p>
-                                            <a href="{{headlines.url}}">
+                                            <a href="{{headlines.url}}" target="_blank">
                                                 <p class="card-text">Find out more</p>
                                             </a>
                                         </div>
                                         <div class="card-footer">
-                                            <medium class="text-muted">Publish on:{{headlines.publishedAt}}</medium>
+                                            <medium class="text-muted">Published on:{{headlines.publishedAt}}</medium>
                                         </div>
                                     </div>
                                 {% endfor %}
