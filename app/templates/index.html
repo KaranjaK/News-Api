@@ -16,7 +16,7 @@
                             <div class="list-group list-group-flush scrolly">
                                 <ul>
                                     {% for source in sources %}
-                                        <a href="/articles/{{source.id}}">
+                                        <a href="{{source.id}}">
                                             <p class="text-capitalize text-dark ">{{source.name}}</p>
                                         </a>
                                     {% endfor %}
@@ -31,17 +31,17 @@
                             <h1 class="headlinenews"> NEWS MAKING HEADLINES </h3>
                             <div class="card-columns">
                                 {% for headlines in headlines %}
-                                    <div class="card">
-                                        <img class="card" src="{{headlines.image}}" alt="Card image cap" size="100px100">
+                                    <div class="card zoom">
+                                        <img class="card" src="{{headlines.urlToImage}}" alt="Loading Image.....">
                                         <div class="card-body">
-                                            <h5 class="card-title">{{headlines.author}}</h5>
+                                            <h4 class="card-title">{{headlines.author}}</h4>
                                             <p class="card-text">{{headlines.description}}</p>
                                             <a href="{{headlines.url}}">
-                                                <p class="card-text">Click here for more details!</p>
+                                                <p class="card-text">Find out more</p>
                                             </a>
                                         </div>
                                         <div class="card-footer">
-                                            <small class="text-muted">Publish date:{{headlines.time}}</small>
+                                            <medium class="text-muted">Publish on:{{headlines.publishedAt}}</medium>
                                         </div>
                                     </div>
                                 {% endfor %}
