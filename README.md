@@ -7,7 +7,7 @@
 #### *Kelvin Karanja*
 
 ## Screenshot
-<img src='https://github.com/KaranjaK/News-Api/tree/master/images'>
+<img src='https://github.com/KaranjaK/News-Api/blob/master/images/images.png'>
 
 ## User Stories
 The user would like to.... :
@@ -27,7 +27,7 @@ The user would like to.... :
 ### Cloning
 * Open Terminal {Ctrl+Alt+T}
 * Git clone: https://github.com/KaranjaK/News-Api
-* cd Password-Locker
+* cd News-API
 * code . or atom . based on the text editor you have.
 
 ### Running the Application
