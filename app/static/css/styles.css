@@ -36,3 +36,14 @@ a {
     text-align: center;
     font-family: Alfa Slab One;
 }
+.card-text{
+    color: #000;
+}
+.zoom{
+    transition: transform 1s;
+}
+.zoom:hover{
+    -ms-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
